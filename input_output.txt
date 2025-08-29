@@ -1,0 +1,251 @@
+********** Bruteforce **********
+
+
+Generated primes: p = 97, q = 79
+n = p * q = 7663
+Time taken to list primes: 32.9996 ms
+
+
+
+
+
+
+Generated primes: p = 47, q = 67
+n = p * q = 3149
+Time taken to list primes: 11.2321 ms
+
+
+
+
+
+
+Generated primes: p = 107, q = 31
+n = p * q = 3317
+Time taken to list primes: 12.4718 ms
+
+
+
+
+
+
+Generated primes: p = 11, q = 181
+n = p * q = 1991
+Time taken to list primes: 6.5524 ms
+
+
+
+
+
+
+
+********** rsa_demo **********
+
+
+Generating two primes using Miller-Rabin...
+p = 37
+q = 53
+n = 1961
+φ(n) = 1872
+Public key: (e = 5, n = 1961)
+Private key: (d = 749, n = 1961)
+Enter a short message (letters only): hello
+Message as numbers: [8, 5, 12, 12, 15]
+Ciphertext numbers: [1392, 1164, 1746, 1746, 468]
+Decrypted numbers: [8, 5, 12, 12, 15]
+Decrypted text: HELLO
+
+
+
+
+
+
+Generating two primes using Miller-Rabin...
+p = 157
+q = 211
+n = 33127
+φ(n) = 32760
+Public key: (e = 11, n = 33127)
+Private key: (d = 14891, n = 33127)
+Enter a short message (letters only): Zahra
+Message as numbers: [26, 1, 8, 18, 1]
+Ciphertext numbers: [23937, 1, 4111, 23545, 1]
+Decrypted numbers: [26, 1, 8, 18, 1]
+Decrypted text: ZAHRA
+
+
+
+
+
+
+Generating two primes using Miller-Rabin...
+p = 41
+q = 139
+n = 5699
+φ(n) = 5520
+Public key: (e = 7, n = 5699)
+Private key: (d = 3943, n = 5699)
+Enter a short message (letters only): beautiful
+Message as numbers: [2, 5, 1, 21, 20, 9, 6, 21, 12]
+Ciphertext numbers: [128, 4038, 1, 5076, 4600, 1508, 685, 5076, 2195]
+Decrypted numbers: [2, 5, 1, 21, 20, 9, 6, 21, 12]
+Decrypted text: BEAUTIFUL
+
+
+
+
+
+
+Generating two primes using Miller-Rabin...
+p = 7
+q = 67
+n = 469
+φ(n) = 396
+Public key: (e = 5, n = 469)
+Private key: (d = 317, n = 469)
+Enter a short message (letters only): target
+Message as numbers: [20, 1, 18, 7, 5, 20]
+Ciphertext numbers: [13, 1, 436, 392, 311, 13]
+Decrypted numbers: [20, 1, 18, 7, 5, 20]
+Decrypted text: TARGET
+
+
+
+
+
+
+**********euclid**********
+
+
+e: 2237   phi_n: 4723
+gcd(e, phi_n): 1
+x: 1176   y: -557
+2237*1176 + 4723*-557 = 1
+d (modular inverse of e): 1176
+(e*d) % phi_n = 1
+
+steps:
+step 0    q: 0    r: 4723    s: 0    t: 1
+step 1    q: 2    r: 2237    s: 1    t: 0
+step 2    q: 8    r: 249    s: -2    t: 1
+step 3    q: 1    r: 245    s: 17    t: -8
+step 4    q: 61    r: 4    s: -19    t: 9
+step 5    q: 4    r: 1    s: 1176    t: -557
+final    g: 1    x: 1176    y: -557
+
+--- How d is calculated ---
+Equation from Extended Euclid: 2237*(1176) + 4723*(-557) = gcd = 1
+Since gcd = 1, the modular inverse of e modulo phi_n is:
+d = x mod phi_n = (1176) % 4723 = 1176
+Check: (e*d) % phi_n = (2237*1176) % 4723 = 1
+
+
+
+
+
+
+e: 2545   phi_n: 3293
+gcd(e, phi_n): 1
+x: 1466   y: -1133
+2545*1466 + 3293*-1133 = 1
+d (modular inverse of e): 1466
+(e*d) % phi_n = 1
+
+steps:
+step 0    q: 0    r: 3293    s: 0    t: 1
+step 1    q: 1    r: 2545    s: 1    t: 0
+step 2    q: 3    r: 748    s: -1    t: 1
+step 3    q: 2    r: 301    s: 4    t: -3
+step 4    q: 2    r: 146    s: -9    t: 7
+step 5    q: 16    r: 9    s: 22    t: -17
+step 6    q: 4    r: 2    s: -361    t: 279
+step 7    q: 2    r: 1    s: 1466    t: -1133
+final    g: 1    x: 1466    y: -1133
+
+--- How d is calculated ---
+Equation from Extended Euclid: 2545*(1466) + 3293*(-1133) = gcd = 1
+Since gcd = 1, the modular inverse of e modulo phi_n is:
+d = x mod phi_n = (1466) % 3293 = 1466
+Check: (e*d) % phi_n = (2545*1466) % 3293 = 1
+
+
+
+
+
+
+e: 3552   phi_n: 3067
+gcd(e, phi_n): 1
+x: -1094   y: 1267
+3552*-1094 + 3067*1267 = 1
+d (modular inverse of e): 1973
+(e*d) % phi_n = 1
+
+steps:
+step 0    q: 1    r: 3067    s: 0    t: 1
+step 1    q: 6    r: 485    s: 1    t: -1
+step 2    q: 3    r: 157    s: -6    t: 7
+step 3    q: 11    r: 14    s: 19    t: -22
+step 4    q: 4    r: 3    s: -215    t: 249
+step 5    q: 1    r: 2    s: 879    t: -1018
+step 6    q: 2    r: 1    s: -1094    t: 1267
+final    g: 1    x: -1094    y: 1267
+
+--- How d is calculated ---
+Equation from Extended Euclid: 3552*(-1094) + 3067*(1267) = gcd = 1
+Since gcd = 1, the modular inverse of e modulo phi_n is:
+d = x mod phi_n = (-1094) % 3067 = 1973
+Check: (e*d) % phi_n = (3552*1973) % 3067 = 1
+
+
+
+
+
+
+e: 1417   phi_n: 2036
+gcd(e, phi_n): 1
+x: 273   y: -190
+1417*273 + 2036*-190 = 1
+d (modular inverse of e): 273
+(e*d) % phi_n = 1
+
+steps:
+step 0    q: 0    r: 2036    s: 0    t: 1
+step 1    q: 1    r: 1417    s: 1    t: 0
+step 2    q: 2    r: 619    s: -1    t: 1
+step 3    q: 3    r: 179    s: 3    t: -2
+step 4    q: 2    r: 82    s: -10    t: 7
+step 5    q: 5    r: 15    s: 23    t: -16
+step 6    q: 2    r: 7    s: -125    t: 87
+step 7    q: 7    r: 1    s: 273    t: -190
+final    g: 1    x: 273    y: -190
+
+--- How d is calculated ---
+Equation from Extended Euclid: 1417*(273) + 2036*(-190) = gcd = 1
+Since gcd = 1, the modular inverse of e modulo phi_n is:
+d = x mod phi_n = (273) % 2036 = 273
+Check: (e*d) % phi_n = (1417*273) % 2036 = 1
+
+
+
+
+
+
+**********miller**********
+
+
+3444662750839078672981234826212791024471007239709872379395378004506062746527275794330036587456628798428661436886977237678508144525904623163053919032188011 
+
+ 5287896541519536064327982769747609795531615514776403911180257766315187684324495739676092732565799705526625484681484109496687278107466747810996387520754429
+
+
+
+
+
+
+**********game**********
+
+
+Welcome to the RSA letter-guessing game!
+We have c=8, public key = (5,65), private key =(29,65)!
+So can you guess the letter? h
+Correct! You decoded the letter successfully!
+
