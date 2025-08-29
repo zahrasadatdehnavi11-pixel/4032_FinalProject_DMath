@@ -43,3 +43,4 @@ if __name__ == "__main__":
     rsa = BruteForceRSA(bits=8)
     rsa.print_primes()
     rsa.list_all_primes_up_to_n()
+
