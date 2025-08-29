@@ -10,7 +10,7 @@ class Miller:
     @staticmethod
     def power(base, exp, mod):
         """
-        Modular exponentiation using fast exponentiation (square-and-multiply).
+        Perform modular exponentiation using the square-and-multiply method.
         Efficiently computes (base^exp) % mod.
         """
         result = 1
@@ -25,8 +25,8 @@ class Miller:
     @staticmethod
     def miller_test(d, n):
         """
-        Performs one iteration of the Miller-Rabin test.
-        Returns True if n is probably prime, otherwise False.
+        Executes one round of the Miller-Rabin primality test.
+        Returns True if n is probably prime, False if it is definitely composite.
         """
         a = random.randint(2, n - 2)
         x = Miller.power(a, d, n)
@@ -44,8 +44,8 @@ class Miller:
     @staticmethod
     def is_prime(n, k=10):
         """
-        Determines if n is prime using k iterations 
-        of the Miller-Rabin primality test.
+        Determines if n is prime using k iterations of the Miller-Rabin test.
+        More iterations increase confidence in the result.
         """
         if n <= 1 or n == 4:
             return False
@@ -62,16 +62,20 @@ class Miller:
     @staticmethod
     def generate_prime(bits=8):
         """
-        Generates a random prime number with the specified bit length.
+        Generates a random prime number of the specified bit length.
+        Uses the Miller-Rabin primality test for verification.
         """
         while True:
-            n = secrets.randbits(bits) | 1
+            n = secrets.randbits(bits) | 1  # Ensure the number is odd
             if Miller.is_prime(n, 10):
                 return n
 
 
 if __name__ == "__main__":
+    # Generate two large prime numbers (p and q) with 512-bit length
     p = Miller.generate_prime(512)
     q = Miller.generate_prime(512)
+    
+    # Display the generated primes, separated by a double newline for clarity
     print(p, "\n\n", q)
 
