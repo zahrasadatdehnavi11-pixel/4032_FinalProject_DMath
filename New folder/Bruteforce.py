@@ -1,5 +1,5 @@
 import time
-from miller import Miller  # Use your Miller class to generate primes
+from miller import Miller  # Use Miller class to generate primes
 
 class BruteForceRSA:
     """
@@ -43,4 +43,5 @@ if __name__ == "__main__":
     rsa = BruteForceRSA(bits=8)
     rsa.print_primes()
     rsa.list_all_primes_up_to_n()
+
 
